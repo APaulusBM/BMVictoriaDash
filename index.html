@@ -11,11 +11,7 @@
             theme: {
                 extend: {
                     colors: {
-                        bmGreen: {
-                            DEFAULT: '#1B3B2B',
-                            dark: '#12281D',
-                            light: '#2C5E43'
-                        },
+                        bmGreen: { DEFAULT: '#1B3B2B', dark: '#12281D', light: '#2C5E43' },
                         bmSand: '#F9F6F0',
                         bmTerracotta: '#C86D51'
                     }
@@ -33,283 +29,198 @@
             <p class="text-xs text-emerald-300 uppercase tracking-widest mt-1">Victoria · Weekly Operations</p>
         </div>
         <nav class="flex-1 p-4 space-y-2 text-sm">
-            <a href="index.html" class="flex items-center space-x-3 px-4 py-2.5 rounded-lg bg-white/10 font-medium text-white">
-                📊 Weekly Overview
-            </a>
+            <a href="index.html" class="flex items-center space-x-3 px-4 py-2.5 rounded-lg bg-white/10 font-medium text-white">📊 Weekly Overview</a>
+            
+            <!-- BM Trading Pack Link -->
             <a href="https://bm-weekly-ops.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
                 <span>📈 BM Trading Pack</span>
-                <span class="text-xs opacity-60">↗</span>
+                <span class="text-xs opacity-70">↗</span>
             </a>
-            <a href="https://mor-scorecard.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
+
+            <!-- MOR Scorecard Link -->
+            <a href="https://bmmor.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
                 <span>📋 MOR Scorecard</span>
-                <span class="text-xs opacity-60">↗</span>
+                <span class="text-xs opacity-70">↗</span>
             </a>
-            <a href="https://ops-excellence.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
+
+            <!-- Ops Excellence Checks Link -->
+            <a href="https://bm-ops-excellence-checks.netlify.app/#report" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
                 <span>✨ Ops Excellence Report</span>
-                <span class="text-xs opacity-60">↗</span>
+                <span class="text-xs opacity-70">↗</span>
             </a>
-            <a href="https://guest-sentiment.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
+
+            <!-- Sentiment Search Link -->
+            <a href="https://client.sentimentsearch.com/my-business/overview" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
                 <span>💬 Guest Sentiment Search</span>
-                <span class="text-xs opacity-60">↗</span>
+                <span class="text-xs opacity-70">↗</span>
             </a>
-            <a href="https://the-brothership.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
+
+            <!-- Brothership Link -->
+            <a href="https://marcusos.netlify.app/login" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
                 <span>⚓ The Brothership</span>
-                <span class="text-xs opacity-60">↗</span>
+                <span class="text-xs opacity-70">↗</span>
             </a>
-            <a href="https://planner.microsoft.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
+
+            <!-- Microsoft Planner Link -->
+            <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
                 <span>🎯 Microsoft Planner</span>
-                <span class="text-xs opacity-60">↗</span>
+                <span class="text-xs opacity-70">↗</span>
             </a>
         </nav>
-        <div class="p-4 border-t border-white/10 text-xs text-emerald-300">
+        <div class="p-4 border-t border-white/10 text-xs text-emerald-200">
             <p class="font-semibold text-white">Alex Paulus</p>
-            <p class="opacity-80">General Manager · W33 Pack</p>
+            <p>General Manager · W33 Pack</p>
         </div>
     </aside>
 
     <!-- Main Content Area -->
-    <main class="flex-1 flex flex-col min-h-screen">
+    <main class="flex-1 flex flex-col min-w-0 overflow-y-auto">
         
         <!-- Top Bar -->
-        <header class="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 px-8 py-4 flex items-center justify-between">
+        <header class="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 px-8 py-4 flex justify-between items-center">
             <div>
-                <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Week Ending 15 Nov 2026 (W33)</span>
-                <h2 class="text-2xl font-black text-zinc-900 dark:text-white">Victoria KPI Summary</h2>
+                <span class="text-xs font-bold uppercase tracking-wider text-bmTerracotta">Week Ending 15 Nov 2026 (W33)</span>
+                <h2 class="text-2xl font-bold tracking-tight">Victoria KPI Summary</h2>
             </div>
             <div class="flex items-center space-x-4">
-                <button onclick="document.documentElement.classList.toggle('dark')" class="text-xs bg-zinc-100 dark:bg-zinc-800 px-3 py-1.5 rounded-lg font-medium hover:bg-zinc-200 dark:hover:bg-zinc-700 transition">
-                    🌙 Toggle Theme
-                </button>
+                <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">🌙 Toggle Theme</button>
+                <span class="bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full">+9.87% vs Budget</span>
             </div>
         </header>
 
-        <!-- Dashboard Content -->
-        <div class="p-8 max-w-7xl w-full mx-auto space-y-8">
-            
-            <!-- KPI Cards Grid -->
+        <!-- Dashboard Body -->
+        <div class="p-8 max-w-7xl mx-auto w-full space-y-8">
+
+            <!-- Top-Line Metric Cards (Color Coded vs Targets) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <!-- Weekly Sales -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex flex-col justify-between">
+                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
                     <div>
-                        <span class="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-semibold">Weekly Sales</span>
-                        <div class="text-3xl font-extrabold mt-1 text-zinc-900 dark:text-white">£60,417</div>
+                        <p class="text-xs font-medium text-zinc-500 uppercase">Weekly Sales</p>
+                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">£60,417</p>
                     </div>
-                    <div class="mt-4 text-xs font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-1 rounded-md inline-flex items-center w-fit">
-                        ↑ +9.87% vs Budget (£54,992)
-                    </div>
+                    <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-2 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block w-fit">↑ +9.87% vs Budget (£54,992)</p>
                 </div>
 
                 <!-- Labour Cost % -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex flex-col justify-between">
+                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
                     <div>
-                        <span class="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-semibold">Labour Cost %</span>
-                        <div class="text-3xl font-extrabold mt-1 text-zinc-900 dark:text-white">37.98%</div>
+                        <p class="text-xs font-medium text-zinc-500 uppercase">Labour Cost %</p>
+                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">37.98%</p>
                     </div>
-                    <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-2">Target: ≤ 38.5% <span class="text-emerald-600 font-medium">(Achieved)</span></p>
+                    <p class="text-xs text-emerald-600 mt-2 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block w-fit">Target: ≤ 38.5% (Achieved)</p>
                 </div>
 
                 <!-- Spend Per Guest (SPG) -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex flex-col justify-between">
+                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
                     <div>
-                        <span class="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-semibold">Spend Per Guest (SPG)</span>
-                        <div class="text-3xl font-extrabold mt-1 text-zinc-900 dark:text-white">£25.85</div>
+                        <p class="text-xs font-medium text-zinc-500 uppercase">Spend Per Guest (SPG)</p>
+                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">£25.85</p>
                     </div>
-                    <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-2">Target: ≥ £25.00 <span class="text-emerald-600 font-medium">(Achieved)</span></p>
+                    <p class="text-xs text-emerald-600 mt-2 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block w-fit">Target: ≥ £25.00 (Achieved)</p>
                 </div>
 
                 <!-- Marcus Choice % -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex flex-col justify-between">
+                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
                     <div>
-                        <span class="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-semibold">Marcus Choice %</span>
-                        <div class="text-3xl font-extrabold mt-1 text-zinc-900 dark:text-white">21.50%</div>
+                        <p class="text-xs font-medium text-zinc-500 uppercase">Marcus Choice %</p>
+                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">21.50%</p>
                     </div>
-                    <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-2">Target: ≥ 15% <span class="text-emerald-600 font-medium">(Outstanding)</span></p>
+                    <p class="text-xs text-emerald-600 mt-2 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block w-fit">Target: ≥ 15% (Outstanding)</p>
                 </div>
 
-                <!-- Drinks Attach -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex flex-col justify-between">
+                <!-- Drinks Attach Score -->
+                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
                     <div>
-                        <span class="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-semibold">Drinks Attach</span>
-                        <div class="text-3xl font-extrabold mt-1 text-zinc-900 dark:text-white">1.23</div>
+                        <p class="text-xs font-medium text-zinc-500 uppercase">Drinks Attach</p>
+                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">1.23</p>
                     </div>
-                    <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-2">Target: ≥ 1.28 <span class="text-amber-600 font-medium">(Focus Area)</span></p>
+                    <p class="text-xs text-amber-600 mt-2 font-medium bg-amber-50 dark:bg-amber-950/40 p-1 rounded inline-block w-fit">Target: ≥ 1.28 (Focus Area)</p>
                 </div>
 
-                <!-- Net Promoter Score (NPS) -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex flex-col justify-between">
+                <!-- NPS -->
+                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
                     <div>
-                        <span class="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-semibold">Net Promoter Score (NPS)</span>
-                        <div class="text-3xl font-extrabold mt-1 text-zinc-900 dark:text-white">82</div>
+                        <p class="text-xs font-medium text-zinc-500 uppercase">Net Promoter Score (NPS)</p>
+                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">82</p>
                     </div>
-                    <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-2">Target: ≥ 80 <span class="text-emerald-600 font-medium">(Achieved)</span></p>
+                    <p class="text-xs text-emerald-600 mt-2 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block w-fit">Target: ≥ 80 (Achieved)</p>
                 </div>
 
                 <!-- Team Pulse -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex flex-col justify-between">
+                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
                     <div>
-                        <span class="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-semibold">Team Pulse</span>
-                        <div class="text-3xl font-extrabold mt-1 text-zinc-900 dark:text-white">7.4</div>
+                        <p class="text-xs font-medium text-zinc-500 uppercase">Team Pulse</p>
+                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">7.4</p>
                     </div>
-                    <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-2">Target: ≥ 7.0 <span class="text-emerald-600 font-medium">(Achieved)</span></p>
+                    <p class="text-xs text-emerald-600 mt-2 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block w-fit">Target: ≥ 7.0 (Achieved)</p>
                 </div>
 
-                <!-- All-Time Record Sales Card -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex flex-col justify-between">
+                <!-- All-Time Record Sales -->
+                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
                     <div>
-                        <span class="text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">🏆 All-Time Record Sales</span>
-                        <div class="text-3xl font-extrabold mt-1 text-zinc-900 dark:text-white">£14,547</div>
+                        <p class="text-xs font-medium text-emerald-600 dark:text-emerald-400 uppercase font-semibold">🏆 All-Time Record Sales</p>
+                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">£14,547</p>
                     </div>
                     <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-2">Achieved Saturday (W33 Peak)</p>
                 </div>
 
             </div>
 
-            <!-- Performance History Table -->
-            <div class="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 p-6">
+            <!-- Past Weeks Performance Table -->
+            <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
                 <div class="mb-4">
-                    <h3 class="text-lg font-bold text-zinc-900 dark:text-white">Past Weeks Performance History</h3>
-                    <p class="text-xs text-zinc-500 dark:text-zinc-400">Comparative trend analysis across recent trading periods</p>
+                    <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400">Past Weeks Performance History</h3>
+                    <p class="text-xs text-zinc-500">Comparative trend analysis across recent trading periods</p>
                 </div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left text-sm">
-                        <thead>
-                            <tr class="border-b border-zinc-200 dark:border-zinc-800 text-zinc-500 text-xs uppercase">
-                                <th class="pb-3 font-semibold">Metric</th>
-                                <th class="pb-3 font-semibold">Target</th>
-                                <th class="pb-3 font-semibold text-emerald-600 dark:text-emerald-400">W33 (Current)</th>
-                                <th class="pb-3 font-semibold">W32 (w/e 8 Nov)</th>
-                                <th class="pb-3 font-semibold">W31 (w/e 1 Nov)</th>
-                                <th class="pb-3 font-semibold">W30 (w/e 25 Oct)</th>
+                        <thead class="bg-zinc-50 dark:bg-zinc-800 text-zinc-500 text-xs uppercase tracking-wider">
+                            <tr>
+                                <th class="p-3">Metric</th>
+                                <th class="p-3">Target</th>
+                                <th class="p-3">W33 (Current)</th>
+                                <th class="p-3">W32 (w/e 8 Nov)</th>
+                                <th class="p-3">W31 (w/e 1 Nov)</th>
+                                <th class="p-3">W30 (w/e 25 Oct)</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-zinc-100 dark:divide-zinc-800 text-zinc-700 dark:text-zinc-300">
+                        <tbody class="divide-y divide-zinc-200 dark:divide-zinc-800 text-xs">
                             <tr>
-                                <td class="py-3 font-medium">Sales vs Budget</td>
-                                <td class="py-3 text-zinc-500">Site Budget</td>
-                                <td class="py-3 font-bold text-emerald-600 dark:text-emerald-400">+9.87% (£60,417)</td>
-                                <td class="py-3">+0.4% (£52,771)</td>
-                                <td class="py-3">−3.8% (£51,351)</td>
-                                <td class="py-3">−4.4% (£51,500)</td>
+                                <td class="p-3 font-medium">Sales vs Budget</td>
+                                <td class="p-3 text-zinc-500">Site Budget</td>
+                                <td class="p-3 font-semibold text-emerald-600">+9.87% (£60,417)</td>
+                                <td class="p-3 text-emerald-600">+0.4% (£52,771)</td>
+                                <td class="p-3 text-rose-600">−3.8% (£51,351)</td>
+                                <td class="p-3 text-rose-600">−4.4% (£51,500)</td>
                             </tr>
                             <tr>
-                                <td class="py-3 font-medium">Labour Cost %</td>
-                                <td class="py-3 text-zinc-500">≤ 38.5%</td>
-                                <td class="py-3 font-bold text-emerald-600 dark:text-emerald-400">37.98%</td>
-                                <td class="py-3">37.2%</td>
-                                <td class="py-3">41.4%</td>
-                                <td class="py-3">42.6%</td>
+                                <td class="p-3 font-medium">Labour Cost %</td>
+                                <td class="p-3 text-zinc-500">≤ 38.5%</td>
+                                <td class="p-3 font-semibold text-emerald-600">37.98%</td>
+                                <td class="p-3 text-emerald-600">37.2%</td>
+                                <td class="p-3 text-rose-600">41.4%</td>
+                                <td class="p-3 text-rose-600">42.6%</td>
                             </tr>
                             <tr>
-                                <td class="py-3 font-medium">Spend Per Guest (SPG)</td>
-                                <td class="py-3 text-zinc-500">≥ £25.00</td>
-                                <td class="py-3 font-bold text-emerald-600 dark:text-emerald-400">£25.85</td>
-                                <td class="py-3">£25.48</td>
-                                <td class="py-3">£23.49</td>
-                                <td class="py-3">£25.10</td>
+                                <td class="p-3 font-medium">Spend Per Guest (SPG)</td>
+                                <td class="p-3 text-zinc-500">≥ £25.00</td>
+                                <td class="p-3 font-semibold text-emerald-600">£25.85</td>
+                                <td class="p-3 text-emerald-600">£25.48</td>
+                                <td class="p-3 text-rose-600">£23.49</td>
+                                <td class="p-3 text-emerald-600">£25.10</td>
                             </tr>
                             <tr>
-                                <td class="py-3 font-medium">Marcus Choice %</td>
-                                <td class="py-3 text-zinc-500">≥ 15.0%</td>
-                                <td class="py-3 font-bold text-emerald-600 dark:text-emerald-400">21.50%</td>
-                                <td class="py-3">21.7%</td>
-                                <td class="py-3">13.5%</td>
-                                <td class="py-3">12.8%</td>
+                                <td class="p-3 font-medium">Marcus Choice %</td>
+                                <td class="p-3 text-zinc-500">≥ 15.0%</td>
+                                <td class="p-3 font-semibold text-emerald-600">21.50%</td>
+                                <td class="p-3 text-emerald-600">21.7%</td>
+                                <td class="p-3 text-rose-600">13.5%</td>
+                                <td class="p-3 text-rose-600">12.8%</td>
                             </tr>
                             <tr>
-                                <td class="py-3 font-medium">Drinks Attach</td>
-                                <td class="py-3 text-zinc-500">≥ 1.28</td>
-                                <td class="py-3 font-bold text-emerald-600 dark:text-emerald-400">1.23</td>
-                                <td class="py-3">1.21</td>
-                                <td class="py-3">1.16</td>
-                                <td class="py-3">1.16</td>
-                            </tr>
-                            <tr>
-                                <td class="py-3 font-medium">Net Promoter Score (NPS)</td>
-                                <td class="py-3 text-zinc-500">≥ 80</td>
-                                <td class="py-3 font-bold text-emerald-600 dark:text-emerald-400">82</td>
-                                <td class="py-3">82</td>
-                                <td class="py-3">85</td>
-                                <td class="py-3">83</td>
-                            </tr>
-                            <tr>
-                                <td class="py-3 font-medium">Team Pulse</td>
-                                <td class="py-3 text-zinc-500">≥ 7.0</td>
-                                <td class="py-3 font-bold text-emerald-600 dark:text-emerald-400">7.4</td>
-                                <td class="py-3">7.3</td>
-                                <td class="py-3">7.9</td>
-                                <td class="py-3">7.8</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Narrative & Focus Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                
-                <!-- GM Briefing -->
-                <div class="lg:col-span-2 bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 p-6 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold text-zinc-900 dark:text-white mb-2">GM Weekly Briefing & Narrative</h3>
-                        <p class="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                            Really strong week finishing <strong class="text-zinc-900 dark:text-white">+9.87% up on budget (£60,417 vs £54,992)</strong>. A slow Mon–Thu (-22h saved on labour) was heavily outweighed by a record-breaking weekend: Friday's biggest breakfast ever (£9,449) and a massive Saturday (£14,547). Sunday saw strong brunch covers.
-                        </p>
-                        <div class="mt-4 p-4 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl border border-zinc-100 dark:border-zinc-800 text-xs text-zinc-600 dark:text-zinc-300">
-                            <span class="font-bold text-zinc-900 dark:text-white block mb-1">Operational Focus:</span>
-                            Weekend brunch table turnover — 12pm is a real bottleneck with early tables (especially drinks-only) lingering. Food Alert coaching showed pest/checklist improvements, but kitchen labelling & FIFO need tighter focus.
-                        </div>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800 flex justify-between items-center text-xs text-zinc-500">
-                        <span>Forecast Sales Next Week: <strong>£54,750</strong></span>
-                        <span>Induction: Head Chef Luis & Sous Chef Sam (48 hrs each)</span>
-                    </div>
-                </div>
-
-                <!-- Guest Sentiment & Focus Board -->
-                <div class="space-y-6">
-                    
-                    <!-- Guest Sentiment Card -->
-                    <div class="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="text-base font-bold text-zinc-900 dark:text-white">Guest Sentiment</h3>
-                            <a href="https://guest-sentiment.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-600 hover:underline">Search ↗</a>
-                        </div>
-                        <ul class="space-y-3 text-xs text-zinc-600 dark:text-zinc-300">
-                            <li class="flex items-start space-x-2">
-                                <span class="text-amber-500">★</span>
-                                <div><strong class="text-zinc-900 dark:text-white">Amelia (x5 mentions):</strong> Praised for warm, attentive service & set-menu guidance.</div>
-                            </li>
-                            <li class="flex items-start space-x-2">
-                                <span class="text-amber-500">★</span>
-                                <div><strong class="text-zinc-900 dark:text-white">Jamal & Shay:</strong> Commended for impeccable menu & wine knowledge.</div>
-                            </li>
-                            <li class="flex items-start space-x-2">
-                                <span class="text-red-500">⚠</span>
-                                <div><strong class="text-zinc-900 dark:text-white">Guest Incident (9 Nov):</strong> 2-star review regarding unrequested £2 water charge. <span class="text-emerald-600 block mt-0.5">Actioned: FOH briefing updated.</span></div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Focus Board -->
-                    <div class="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="text-base font-bold text-zinc-900 dark:text-white">This Week's Focus Board</h3>
-                            <a href="https://planner.microsoft.com/" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-600 hover:underline">Planner ↗</a>
-                        </div>
-                        <ol class="space-y-3 text-xs text-zinc-600 dark:text-zinc-300 list-decimal list-inside">
-                            <li class="pl-1"><strong class="text-zinc-900 dark:text-white">Brunch Turnover:</strong> Tackle 12pm bottleneck where early/drinks-only tables linger during brunch.</li>
-                            <li class="pl-1"><strong class="text-zinc-900 dark:text-white">Labelling & FIFO:</strong> Tighten kitchen labelling and FIFO compliance after Food Alert feedback.</li>
-                            <li class="pl-1"><strong class="text-zinc-900 dark:text-white">FOH Bill Checks:</strong> Brief FOH on tap vs. filtered water on arrival and rigorously check bills.</li>
-                        </ol>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </main>
-
-</body>
-</html>
+                                <td class="p-3 font-medium">Drinks Attach</td>
+                                <td class="p-3 text-zinc-500">≥ 1.28</td>
+                                <td class="p-3 font-semibold text-amber-600">1.23</td>
+                                <td class="p-3 text-amber-600
