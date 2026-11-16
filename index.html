@@ -49,7 +49,17 @@
                 <span class="text-xs opacity-70">↗</span>
             </a>
 
-            <a href="#action-tracker" class="flex items-center space-x-3 px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">🎯 Action Tracker</a>
+            <!-- Brothership Link -->
+            <a href="https://marcusos.netlify.app/login" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
+                <span>⚓ The Brothership</span>
+                <span class="text-xs opacity-70">↗</span>
+            </a>
+
+            <!-- Microsoft Planner Link -->
+            <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
+                <span>🎯 Microsoft Planner</span>
+                <span class="text-xs opacity-70">↗</span>
+            </a>
         </nav>
         <div class="p-4 border-t border-white/10 text-xs text-emerald-200">
             <p class="font-semibold text-white">Alex Paulus</p>
@@ -85,6 +95,13 @@
                     <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-1 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block">↑ +9.87% vs Budget (£54,992)</p>
                 </div>
 
+                <!-- Labour Cost % (New) -->
+                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                    <p class="text-xs font-medium text-zinc-500 uppercase">Labour Cost %</p>
+                    <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">37.98%</p>
+                    <p class="text-xs text-emerald-600 mt-1 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block">Target: ≤ 38.5% (Achieved)</p>
+                </div>
+
                 <!-- Spend Per Guest (SPG) -->
                 <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
                     <p class="text-xs font-medium text-zinc-500 uppercase">Spend Per Guest (SPG)</p>
@@ -99,11 +116,11 @@
                     <p class="text-xs text-emerald-600 mt-1 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block">Target: ≥ 15% (Outstanding)</p>
                 </div>
 
-                <!-- Drinks Attach Score -->
+                <!-- Drinks Attach Score (Corrected) -->
                 <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
                     <p class="text-xs font-medium text-zinc-500 uppercase">Drinks Attach</p>
-                    <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">1.28</p>
-                    <p class="text-xs text-emerald-600 mt-1 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block">Target: ≥ 1.28 (Achieved)</p>
+                    <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">1.23</p>
+                    <p class="text-xs text-amber-600 mt-1 font-medium bg-amber-50 dark:bg-amber-950/40 p-1 rounded inline-block">Target: ≥ 1.28 (Focus Area)</p>
                 </div>
 
                 <!-- NPS (Isolated) -->
@@ -127,7 +144,7 @@
                 <div class="lg:col-span-2 bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
                     <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400 mb-3">GM Weekly Briefing & Narrative</h3>
                     <p class="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed mb-4">
-                        Really strong week finishing <strong>+9.87% up on budget (£60,417 vs £54,992)</strong>. A slow Mon–Thu (-22h saved on labour) was heavily outweighed by a record-breaking weekend: Friday's biggest breakfast ever (£9,449) and a massive Saturday (£14,547). Sunday saw a brilliant <strong>303 brunch covers against 73 booked</strong>.
+                        Really strong week finishing <strong>+9.87% up on budget (£60,417 vs £54,992)</strong>[cite: 1]. A slow Mon–Thu (-22h saved on labour) was heavily outweighed by a record-breaking weekend: Friday's biggest breakfast ever (£9,449) and a massive Saturday (£14,547). Sunday saw strong brunch covers.
                     </p>
                     <div class="bg-amber-50 dark:bg-amber-950/30 border-l-4 border-amber-500 p-4 text-xs text-amber-800 dark:text-amber-200 rounded-r-lg">
                         <strong>Operational Focus:</strong> Weekend brunch table turnover — 12pm is a real bottleneck with early tables (especially drinks-only) lingering. Food Alert coaching showed pest/checklist improvements, but kitchen labelling & FIFO need tighter focus.
@@ -159,59 +176,51 @@
                 </div>
             </div>
 
-            <!-- Action Tracker & Microsoft Planner Hub -->
-            <div id="action-tracker" class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+            <!-- This Week's Focus Board -->
+            <div id="focus-areas" class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
                 <div class="flex justify-between items-center mb-4">
                     <div>
-                        <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400">Action Tracker & Microsoft Planner</h3>
-                        <p class="text-xs text-zinc-500">Managed via Victoria To-Do Lists</p>
+                        <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400">This Week's Focus Board</h3>
+                        <p class="text-xs text-zinc-500">Core operational priorities extracted from the Monday trading report</p>
                     </div>
                     <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="text-xs bg-bmGreen text-white px-3 py-1.5 rounded-lg hover:bg-bmGreen-light transition flex items-center space-x-2">
-                        <span>Open Microsoft Planner Board</span>
-                        <span>↗</span>
+                        <span>Open Microsoft Planner ↗</span>
                     </a>
                 </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-sm">
-                        <thead class="bg-zinc-50 dark:bg-zinc-800 text-zinc-500 text-xs uppercase tracking-wider">
-                            <tr>
-                                <th class="p-3">Task Description</th>
-                                <th class="p-3">Owner</th>
-                                <th class="p-3">Due Date</th>
-                                <th class="p-3">Status</th>
-                                <th class="p-3 text-right">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-zinc-200 dark:divide-zinc-800 text-xs">
-                            <tr>
-                                <td class="p-3 font-medium">Brief FOH on tap vs. filtered water & check bills</td>
-                                <td class="p-3">RM (Shani)</td>
-                                <td class="p-3">18 Nov</td>
-                                <td class="p-3"><span class="bg-amber-100 text-amber-800 px-2 py-1 rounded">In Progress</span></td>
-                                <td class="p-3 text-right">
-                                    <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline font-medium">View in Planner →</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-medium">Maintain pass timing checks on mains (chicken recovery)</td>
-                                <td class="p-3">HC (Luis)</td>
-                                <td class="p-3">19 Nov</td>
-                                <td class="p-3"><span class="bg-zinc-100 text-zinc-800 px-2 py-1 rounded">Not Started</span></td>
-                                <td class="p-3 text-right">
-                                    <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline font-medium">View in Planner →</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-medium">Implement kitchen FIFO & label audit checks</td>
-                                <td class="p-3">HC (Luis)</td>
-                                <td class="p-3">20 Nov</td>
-                                <td class="p-3"><span class="bg-zinc-100 text-zinc-800 px-2 py-1 rounded">Not Started</span></td>
-                                <td class="p-3 text-right">
-                                    <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline font-medium">View in Planner →</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Focus Area 1 -->
+                    <div class="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                            <h4 class="font-semibold text-sm text-bmGreen dark:text-emerald-400">1. Brunch Table Turnover</h4>
+                        </div>
+                        <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                            Tackle the 12pm bottleneck where early and drinks-only tables linger during peak weekend brunch rushes, slowing down subsequent lunch bookings.
+                        </p>
+                    </div>
+
+                    <!-- Focus Area 2 -->
+                    <div class="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                            <h4 class="font-semibold text-sm text-bmGreen dark:text-emerald-400">2. Kitchen Labelling & FIFO</h4>
+                        </div>
+                        <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                            Tighten up kitchen labelling and strict FIFO compliance following Food Alert coaching feedback to maintain audit readiness.
+                        </p>
+                    </div>
+
+                    <!-- Focus Area 3 -->
+                    <div class="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            <h4 class="font-semibold text-sm text-bmGreen dark:text-emerald-400">3. FOH Bill Checks & Water</h4>
+                        </div>
+                        <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                            Brief FOH to clearly distinguish tap vs. filtered/bottled water on arrival and rigorously check bills before dropping to prevent guest charges confusion.
+                        </p>
+                    </div>
                 </div>
             </div>
 
