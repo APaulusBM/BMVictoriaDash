@@ -30,9 +30,12 @@
         </div>
         <nav class="flex-1 p-4 space-y-2 text-sm">
             <a href="#" class="flex items-center space-x-3 px-4 py-2.5 rounded-lg bg-white/10 font-medium text-white">📊 Weekly Overview</a>
-            <a href="#" class="flex items-center space-x-3 px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">📋 Site Scorecards</a>
-            <a href="#" class="flex items-center space-x-3 px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">💬 Guest Sentiment</a>
-            <a href="#" class="flex items-center space-x-3 px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">🎯 Action Tracker</a>
+            <a href="https://bm-weekly-ops.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
+                <span>📋 Site Scorecards</span>
+                <span class="text-xs opacity-70">↗</span>
+            </a>
+            <a href="#guest-sentiment" class="flex items-center space-x-3 px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">💬 Guest Sentiment</a>
+            <a href="#action-tracker" class="flex items-center space-x-3 px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">🎯 Action Tracker</a>
         </nav>
         <div class="p-4 border-t border-white/10 text-xs text-emerald-200">
             <p class="font-semibold text-white">Alex Paulus</p>
@@ -95,7 +98,7 @@
                 </div>
 
                 <!-- Guest Sentiment Shout-Outs & Flags -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                <div id="guest-sentiment" class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
                     <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400 mb-3">Guest Sentiment & Shout-Outs</h3>
                     <ul class="space-y-3 text-xs text-zinc-600 dark:text-zinc-300">
                         <li class="flex items-start space-x-2">
@@ -115,13 +118,13 @@
             </div>
 
             <!-- Action Tracker & Microsoft Planner Hub -->
-            <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+            <div id="action-tracker" class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
                 <div class="flex justify-between items-center mb-4">
                     <div>
                         <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400">Action Tracker & Microsoft Planner</h3>
                         <p class="text-xs text-zinc-500">Managed via Victoria To-Do Lists</p>
                     </div>
-                    <a href="https://planner.cloud.microsoft" target="_blank" class="text-xs bg-bmGreen text-white px-3 py-1.5 rounded-lg hover:bg-bmGreen-light transition flex items-center space-x-2">
+                    <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="text-xs bg-bmGreen text-white px-3 py-1.5 rounded-lg hover:bg-bmGreen-light transition flex items-center space-x-2">
                         <span>Open Microsoft Planner Board</span>
                         <span>↗</span>
                     </a>
@@ -144,7 +147,7 @@
                                 <td class="p-3">18 Nov</td>
                                 <td class="p-3"><span class="bg-amber-100 text-amber-800 px-2 py-1 rounded">In Progress</span></td>
                                 <td class="p-3 text-right">
-                                    <a href="https://planner.cloud.microsoft" target="_blank" class="text-emerald-600 hover:underline font-medium">View in Planner →</a>
+                                    <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline font-medium">View in Planner →</a>
                                 </td>
                             </tr>
                             <tr>
@@ -153,7 +156,7 @@
                                 <td class="p-3">19 Nov</td>
                                 <td class="p-3"><span class="bg-zinc-100 text-zinc-800 px-2 py-1 rounded">Not Started</span></td>
                                 <td class="p-3 text-right">
-                                    <a href="https://planner.cloud.microsoft" target="_blank" class="text-emerald-600 hover:underline font-medium">View in Planner →</a>
+                                    <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline font-medium">View in Planner →</a>
                                 </td>
                             </tr>
                             <tr>
@@ -162,7 +165,7 @@
                                 <td class="p-3">20 Nov</td>
                                 <td class="p-3"><span class="bg-zinc-100 text-zinc-800 px-2 py-1 rounded">Not Started</span></td>
                                 <td class="p-3 text-right">
-                                    <a href="https://planner.cloud.microsoft" target="_blank" class="text-emerald-600 hover:underline font-medium">View in Planner →</a>
+                                    <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline font-medium">View in Planner →</a>
                                 </td>
                             </tr>
                         </tbody>
