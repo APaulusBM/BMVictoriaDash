@@ -91,7 +91,7 @@
         <!-- Dashboard Body -->
         <div class="p-8 max-w-7xl mx-auto w-full space-y-8">
 
-            <!-- Top-Line Metric Cards (Color Coded vs Targets) -->
+            <!-- Top-Line Metric Cards Grid (7 Clean Cards) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <!-- Weekly Sales -->
@@ -157,15 +157,19 @@
                     <p class="text-xs text-emerald-600 mt-2 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block w-fit">Target: ≥ 7.0 (Achieved)</p>
                 </div>
 
-                <!-- All-Time Record Sales -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <p class="text-xs font-medium text-emerald-600 dark:text-emerald-400 uppercase font-semibold">🏆 All-Time Record Sales</p>
-                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">£14,547</p>
-                    </div>
-                    <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-2">Achieved Saturday (W33 Peak)</p>
-                </div>
+            </div>
 
+            <!-- Featured All-Time Record Sales Banner -->
+            <div class="bg-gradient-to-r from-bmGreen to-[#2C5E43] text-white p-6 rounded-xl shadow-md flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <div>
+                    <span class="bg-emerald-400 text-zinc-950 text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">Milestone Achievement</span>
+                    <h3 class="text-2xl font-black mt-2">🏆 All-Time Record Sales: £14,547</h3>
+                    <p class="text-xs text-emerald-200 mt-1">Achieved on Saturday (W33 Peak Trade) — surpassing all previous site records.</p>
+                </div>
+                <div class="mt-4 sm:mt-0 text-right">
+                    <span class="text-xs text-emerald-300 block">Peak Saturday Breakfast & Dinner</span>
+                    <span class="text-lg font-bold text-white">Record Breaker</span>
+                </div>
             </div>
 
             <!-- Past Weeks Performance Table -->
@@ -231,17 +235,17 @@
                                 <td class="p-3 font-medium">Net Promoter Score (NPS)</td>
                                 <td class="p-3 text-zinc-500">≥ 80</td>
                                 <td class="p-3 font-semibold text-emerald-600">82</td>
-                                <td class="p-3 text-emerald-600">82</td>
-                                <td class="p-3 text-emerald-600">85</td>
-                                <td class="p-3 text-emerald-600">83</td>
+                                <td class="p-3 font-semibold text-emerald-600">82</td>
+                                <td class="p-3 font-semibold text-emerald-600">85</td>
+                                <td class="p-3 font-semibold text-emerald-600">83</td>
                             </tr>
                             <tr>
                                 <td class="p-3 font-medium">Team Pulse</td>
                                 <td class="p-3 text-zinc-500">≥ 7.0</td>
                                 <td class="p-3 font-semibold text-emerald-600">7.4</td>
-                                <td class="p-3 text-emerald-600">7.3</td>
-                                <td class="p-3 text-emerald-600">7.9</td>
-                                <td class="p-3 text-emerald-600">7.8</td>
+                                <td class="p-3 font-semibold text-emerald-600">7.3</td>
+                                <td class="p-3 font-semibold text-emerald-600">7.9</td>
+                                <td class="p-3 font-semibold text-emerald-600">7.8</td>
                             </tr>
                         </tbody>
                     </table>
