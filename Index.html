@@ -34,7 +34,10 @@
                 <span>📋 Site Scorecards</span>
                 <span class="text-xs opacity-70">↗</span>
             </a>
-            <a href="#guest-sentiment" class="flex items-center space-x-3 px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">💬 Guest Sentiment</a>
+            <a href="https://search.google.com/local/reviews" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
+                <span>💬 Guest Sentiment Overview</span>
+                <span class="text-xs opacity-70">↗</span>
+            </a>
             <a href="#action-tracker" class="flex items-center space-x-3 px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">🎯 Action Tracker</a>
         </nav>
         <div class="p-4 border-t border-white/10 text-xs text-emerald-200">
@@ -61,28 +64,51 @@
         <!-- Dashboard Body -->
         <div class="p-8 max-w-7xl mx-auto w-full space-y-8">
 
-            <!-- Top-Line Metric Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Top-Line Metric Cards (Color Coded vs Targets) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Weekly Sales -->
                 <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
                     <p class="text-xs font-medium text-zinc-500 uppercase">Weekly Sales</p>
                     <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">£60,417</p>
-                    <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-1 font-medium">↑ +9.87% vs Budget (£54,992)</p>
+                    <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-1 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block">↑ +9.87% vs Budget (£54,992)</p>
                 </div>
+
+                <!-- Spend Per Guest (SPG) -->
                 <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
                     <p class="text-xs font-medium text-zinc-500 uppercase">Spend Per Guest (SPG)</p>
                     <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">£25.85</p>
-                    <p class="text-xs text-zinc-500 mt-1">Strong brunch cover volume</p>
+                    <p class="text-xs text-emerald-600 mt-1 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block">Target: ≥ £25.00 (Achieved)</p>
                 </div>
+
+                <!-- Marcus Choice % -->
                 <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
                     <p class="text-xs font-medium text-zinc-500 uppercase">Marcus Choice %</p>
                     <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">21.50%</p>
-                    <p class="text-xs text-emerald-600 mt-1 font-medium">Target: ≥ 15% (Strong)</p>
+                    <p class="text-xs text-emerald-600 mt-1 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block">Target: ≥ 15% (Outstanding)</p>
                 </div>
+
+                <!-- Drinks Attach Score -->
                 <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                    <p class="text-xs font-medium text-zinc-500 uppercase">NPS & Team Pulse</p>
-                    <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">82% <span class="text-lg font-normal text-zinc-400">| Pulse 7.4</span></p>
-                    <p class="text-xs text-emerald-600 mt-1 font-medium">13 of 14 reviews rated 4-5 stars</p>
+                    <p class="text-xs font-medium text-zinc-500 uppercase">Drinks Attach</p>
+                    <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">1.28</p>
+                    <p class="text-xs text-emerald-600 mt-1 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block">Target: ≥ 1.28 (Achieved)</p>
                 </div>
+
+                <!-- NPS (Isolated) -->
+                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                    <p class="text-xs font-medium text-zinc-500 uppercase">Net Promoter Score (NPS)</p>
+                    <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">82</p>
+                    <p class="text-xs text-emerald-600 mt-1 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block">Target: ≥ 80 (Achieved)</p>
+                </div>
+
+                <!-- Team Pulse (Isolated) -->
+                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                    <p class="text-xs font-medium text-zinc-500 uppercase">Team Pulse</p>
+                    <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">7.4</p>
+                    <p class="text-xs text-emerald-600 mt-1 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block">Target: ≥ 7.0 (Achieved)</p>
+                </div>
+
             </div>
 
             <!-- GM Narrative & Weekly Highlights -->
@@ -97,23 +123,28 @@
                     </div>
                 </div>
 
-                <!-- Guest Sentiment Shout-Outs & Flags -->
-                <div id="guest-sentiment" class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                    <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400 mb-3">Guest Sentiment & Shout-Outs</h3>
-                    <ul class="space-y-3 text-xs text-zinc-600 dark:text-zinc-300">
-                        <li class="flex items-start space-x-2">
-                            <span class="text-emerald-600 font-bold">★</span>
-                            <span><strong>Amelia (x5 mentions):</strong> Praised for warm, attentive service & set-menu guidance.</span>
-                        </li>
-                        <li class="flex items-start space-x-2">
-                            <span class="text-emerald-600 font-bold">★</span>
-                            <span><strong>Jamal & Shay:</strong> Commended for impeccable menu & wine knowledge.</span>
-                        </li>
-                        <li class="flex items-start space-x-2">
-                            <span class="text-rose-600 font-bold">⚠</span>
-                            <span><strong>Guest Incident (9 Nov):</strong> 2-star review regarding unrequested £2 water charge. <em>Actioned: FOH briefing updated.</em></span>
-                        </li>
-                    </ul>
+                <!-- Guest Sentiment Shout-Outs & Links -->
+                <div id="guest-sentiment" class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400">Guest Sentiment</h3>
+                            <a href="https://search.google.com/local/reviews" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-600 hover:underline">Reviews & Search ↗</a>
+                        </div>
+                        <ul class="space-y-3 text-xs text-zinc-600 dark:text-zinc-300">
+                            <li class="flex items-start space-x-2">
+                                <span class="text-emerald-600 font-bold">★</span>
+                                <span><strong>Amelia (x5 mentions):</strong> Praised for warm, attentive service & set-menu guidance.</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="text-emerald-600 font-bold">★</span>
+                                <span><strong>Jamal & Shay:</strong> Commended for impeccable menu & wine knowledge.</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="text-rose-600 font-bold">⚠</span>
+                                <span><strong>Guest Incident (9 Nov):</strong> 2-star review regarding unrequested £2 water charge. <em>Actioned: FOH briefing updated.</em></span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
