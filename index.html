@@ -262,50 +262,71 @@
                 </div>
             </div>
 
-            <!-- This Week's Focus Board -->
-            <div id="focus-areas" class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                <div class="flex justify-between items-center mb-4">
-                    <div>
-                        <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400">This Week's Focus Board</h3>
-                        <p class="text-xs text-zinc-500">Core operational priorities extracted from the Monday trading report</p>
+            <!-- This Week's Focus Board & Next Week Forecast Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Focus Board (Spans 2 cols) -->
+                <div id="focus-areas" class="lg:col-span-2 bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400">This Week's Focus Board</h3>
+                            <p class="text-xs text-zinc-500">Core operational priorities extracted from the Monday trading report</p>
+                        </div>
+                        <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="text-xs bg-bmGreen text-white px-3 py-1.5 rounded-lg hover:bg-bmGreen-light transition flex items-center space-x-2">
+                            <span>Open Microsoft Planner ↗</span>
+                        </a>
                     </div>
-                    <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="text-xs bg-bmGreen text-white px-3 py-1.5 rounded-lg hover:bg-bmGreen-light transition flex items-center space-x-2">
-                        <span>Open Microsoft Planner ↗</span>
-                    </a>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- Focus Area 1 -->
+                        <div class="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                                <h4 class="font-semibold text-sm text-bmGreen dark:text-emerald-400">1. Brunch Turnover</h4>
+                            </div>
+                            <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                                Tackle the 12pm bottleneck where early and drinks-only tables linger during peak weekend brunch rushes.
+                            </p>
+                        </div>
+
+                        <!-- Focus Area 2 -->
+                        <div class="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                                <h4 class="font-semibold text-sm text-bmGreen dark:text-emerald-400">2. Labelling & FIFO</h4>
+                            </div>
+                            <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                                Tighten up kitchen labelling and strict FIFO compliance following Food Alert coaching feedback.
+                            </p>
+                        </div>
+
+                        <!-- Focus Area 3 -->
+                        <div class="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                <h4 class="font-semibold text-sm text-bmGreen dark:text-emerald-400">3. FOH Bill Checks</h4>
+                            </div>
+                            <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                                Brief FOH to distinguish tap vs. filtered water on arrival and rigorously check bills before dropping.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <!-- Focus Area 1 -->
-                    <div class="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
-                        <div class="flex items-center space-x-2 mb-2">
-                            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                            <h4 class="font-semibold text-sm text-bmGreen dark:text-emerald-400">1. Brunch Table Turnover</h4>
-                        </div>
-                        <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                            Tackle the 12pm bottleneck where early and drinks-only tables linger during peak weekend brunch rushes, slowing down subsequent lunch bookings.
-                        </p>
-                    </div>
 
-                    <!-- Focus Area 2 -->
-                    <div class="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
-                        <div class="flex items-center space-x-2 mb-2">
-                            <span class="w-2 h-2 rounded-full bg-rose-500"></span>
-                            <h4 class="font-semibold text-sm text-bmGreen dark:text-emerald-400">2. Kitchen Labelling & FIFO</h4>
+                <!-- Next Week Outlook & Shift Notes -->
+                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400 mb-2">Next Week Outlook</h3>
+                        <p class="text-xs text-zinc-500 mb-4">Forecast & key training focus</p>
+                        <div class="space-y-3 text-xs text-zinc-600 dark:text-zinc-300">
+                            <div class="p-3 bg-zinc-50 dark:bg-zinc-800/50 rounded-lg">
+                                <p class="font-semibold text-bmGreen dark:text-emerald-400">Forecast Sales: £54,750</p>
+                                <p class="mt-1">Induction & Training: New Head Chef Luis (48 hrs) & Sous Chef Sam (48 hrs).</p>
+                            </div>
+                            <div class="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg border border-emerald-200 dark:border-emerald-900/50">
+                                <p class="font-semibold text-emerald-800 dark:text-emerald-300">Shift Log / Handover Note</p>
+                                <p class="mt-1 text-emerald-700 dark:text-emerald-400">Xmas decorations are now fully up across site. Ensure pre-shift briefings highlight Amelia & Jamal's shout-outs.</p>
+                            </div>
                         </div>
-                        <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                            Tighten up kitchen labelling and strict FIFO compliance following Food Alert coaching feedback to maintain audit readiness.
-                        </p>
-                    </div>
-
-                    <!-- Focus Area 3 -->
-                    <div class="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
-                        <div class="flex items-center space-x-2 mb-2">
-                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                            <h4 class="font-semibold text-sm text-bmGreen dark:text-emerald-400">3. FOH Bill Checks & Water</h4>
-                        </div>
-                        <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                            Brief FOH to clearly distinguish tap vs. filtered/bottled water on arrival and rigorously check bills before dropping to prevent guest charges confusion.
-                        </p>
                     </div>
                 </div>
             </div>
