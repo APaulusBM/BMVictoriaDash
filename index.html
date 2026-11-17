@@ -1,367 +1,273 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brother Marcus Victoria — Weekly Operations (w/e 15 Nov 2026)</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        bmGreen: { DEFAULT: '#1B3B2B', dark: '#12281D', light: '#2C5E43' },
-                        bmSand: '#F9F6F0',
-                        bmTerracotta: '#C86D51'
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-[#F9F6F0] text-zinc-800 dark:bg-zinc-950 dark:text-zinc-100 font-sans antialiased min-h-screen flex">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brother Marcus Victoria — Weekly Operations (w/e 15 Nov 2026)</title>
+  <style>
+    :root {
+      --bg-body: #faf8f5;
+      --bg-sidebar: #0d2b22;
+      --bg-card: #ffffff;
+      --bg-card-subtle: #f4f6f5;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border-color: #e5e7eb;
+      --accent-green: #047857;
+      --accent-teal: #0d9488;
+      --accent-amber: #d97706;
+      --accent-red: #dc2626;
+      --badge-green-bg: #ecfdf5;
+      --badge-green-text: #065f46;
+      --badge-amber-bg: #fffbeb;
+      --badge-amber-text: #92400e;
+    }
 
-    <!-- Sidebar -->
-    <aside class="w-64 bg-bmGreen text-white flex flex-col hidden md:flex border-r border-bmGreen-light/20">
-        <div class="p-6 border-b border-white/10">
-            <h1 class="text-xl font-bold tracking-wide">BROTHER MARCUS</h1>
-            <p class="text-xs text-emerald-300 uppercase tracking-widest mt-1">Victoria · Weekly Operations</p>
-        </div>
-        <nav class="flex-1 p-4 space-y-2 text-sm">
-            <a href="index.html" class="flex items-center space-x-3 px-4 py-2.5 rounded-lg bg-white/10 font-medium text-white">📊 Weekly Overview</a>
-            
-            <!-- BM Trading Pack Link -->
-            <a href="https://bm-weekly-ops.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
-                <span>📈 BM Trading Pack</span>
-                <span class="text-xs opacity-70">↗</span>
-            </a>
+    body.dark-mode {
+      --bg-body: #111827;
+      --bg-sidebar: #071914;
+      --bg-card: #1f2937;
+      --bg-card-subtle: #374151;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --border-color: #374151;
+      --badge-green-bg: #064e3b;
+      --badge-green-text: #a7f3d0;
+      --badge-amber-bg: #78350f;
+      --badge-amber-text: #fde68a;
+    }
 
-            <!-- MOR Scorecard Link -->
-            <a href="https://bmmor.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
-                <span>📋 MOR Scorecard</span>
-                <span class="text-xs opacity-70">↗</span>
-            </a>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
-            <!-- Ops Excellence Checks Link -->
-            <a href="https://bm-ops-excellence-checks.netlify.app/#report" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
-                <span>✨ Ops Excellence Report</span>
-                <span class="text-xs opacity-70">↗</span>
-            </a>
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      display: flex;
+      min-height: 100vh;
+      transition: background-color 0.2s, color 0.2s;
+    }
 
-            <!-- Sentiment Search Link -->
-            <a href="https://client.sentimentsearch.com/my-business/overview" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
-                <span>💬 Guest Sentiment Search</span>
-                <span class="text-xs opacity-70">↗</span>
-            </a>
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background-color: var(--bg-sidebar);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px 16px;
+      flex-shrink: 0;
+    }
 
-            <!-- Brothership Link -->
-            <a href="https://marcusos.netlify.app/login" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
-                <span>⚓ The Brothership</span>
-                <span class="text-xs opacity-70">↗</span>
-            </a>
+    .brand-title {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
 
-            <!-- Microsoft Planner Link -->
-            <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-4 py-2.5 rounded-lg text-emerald-100 hover:bg-white/5">
-                <span>🎯 Microsoft Planner</span>
-                <span class="text-xs opacity-70">↗</span>
-            </a>
-        </nav>
-        <div class="p-4 border-t border-white/10 text-xs text-emerald-200">
-            <p class="font-semibold text-white">Alex Paulus</p>
-            <p>General Manager · W33 Pack</p>
-        </div>
-    </aside>
+    .brand-subtitle {
+      font-size: 11px;
+      color: #9ca3af;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
 
-    <!-- Main Content Area -->
-    <main class="flex-1 flex flex-col min-w-0 overflow-y-auto">
-        
-        <!-- Top Bar -->
-        <header class="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 px-8 py-4 flex justify-between items-center">
-            <div>
-                <span class="text-xs font-bold uppercase tracking-wider text-bmTerracotta">Week Ending 15 Nov 2026 (W33)</span>
-                <h2 class="text-2xl font-bold tracking-tight">Victoria KPI Summary</h2>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">🌙 Toggle Theme</button>
-                <span class="bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full">+9.87% vs Budget</span>
-            </div>
-        </header>
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
 
-        <!-- Dashboard Body -->
-        <div class="p-8 max-w-7xl mx-auto w-full space-y-8">
+    .nav-links a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #d1d5db;
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: background 0.15s;
+    }
 
-            <!-- Top-Line Metric Cards Grid (7 Clean Cards) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <!-- Weekly Sales -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <p class="text-xs font-medium text-zinc-500 uppercase">Weekly Sales</p>
-                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">£60,417</p>
-                    </div>
-                    <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-2 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block w-fit">↑ +9.87% vs Budget (£54,992)</p>
-                </div>
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+    }
 
-                <!-- Labour Cost % -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <p class="text-xs font-medium text-zinc-500 uppercase">Labour Cost %</p>
-                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">37.98%</p>
-                    </div>
-                    <p class="text-xs text-emerald-600 mt-2 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block w-fit">Target: ≤ 38.5% (Achieved)</p>
-                </div>
+    .user-profile {
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 16px;
+      font-size: 13px;
+    }
 
-                <!-- Spend Per Guest (SPG) -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <p class="text-xs font-medium text-zinc-500 uppercase">Spend Per Guest (SPG)</p>
-                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">£25.85</p>
-                    </div>
-                    <p class="text-xs text-emerald-600 mt-2 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block w-fit">Target: ≥ £25.00 (Achieved)</p>
-                </div>
+    .user-profile strong {
+      display: block;
+      color: #ffffff;
+    }
 
-                <!-- Marcus Choice % -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <p class="text-xs font-medium text-zinc-500 uppercase">Marcus Choice %</p>
-                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">21.50%</p>
-                    </div>
-                    <p class="text-xs text-emerald-600 mt-2 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block w-fit">Target: ≥ 15% (Outstanding)</p>
-                </div>
+    .user-profile span {
+      font-size: 12px;
+      color: #9ca3af;
+    }
 
-                <!-- Drinks Attach Score -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <p class="text-xs font-medium text-zinc-500 uppercase">Drinks Attach</p>
-                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">1.23</p>
-                    </div>
-                    <p class="text-xs text-amber-600 mt-2 font-medium bg-amber-50 dark:bg-amber-950/40 p-1 rounded inline-block w-fit">Target: ≥ 1.28 (Focus Area)</p>
-                </div>
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      padding: 32px 40px;
+      max-width: 1400px;
+    }
 
-                <!-- NPS -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <p class="text-xs font-medium text-zinc-500 uppercase">Net Promoter Score (NPS)</p>
-                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">82</p>
-                    </div>
-                    <p class="text-xs text-emerald-600 mt-2 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block w-fit">Target: ≥ 80 (Achieved)</p>
-                </div>
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
 
-                <!-- Team Pulse -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <p class="text-xs font-medium text-zinc-500 uppercase">Team Pulse</p>
-                        <p class="text-3xl font-bold mt-2 text-bmGreen dark:text-emerald-400">7.4</p>
-                    </div>
-                    <p class="text-xs text-emerald-600 mt-2 font-medium bg-emerald-50 dark:bg-emerald-950/40 p-1 rounded inline-block w-fit">Target: ≥ 7.0 (Achieved)</p>
-                </div>
+    .week-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
 
-            </div>
+    .page-title {
+      font-size: 26px;
+      font-weight: 700;
+    }
 
-            <!-- Featured All-Time Record Sales Banner -->
-            <div class="bg-gradient-to-r from-bmGreen to-[#2C5E43] text-white p-6 rounded-xl shadow-md flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                <div>
-                    <span class="bg-emerald-400 text-zinc-950 text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">Milestone Achievement</span>
-                    <h3 class="text-2xl font-black mt-2">🏆 All-Time Record Sales: £14,547</h3>
-                    <p class="text-xs text-emerald-200 mt-1">Achieved on Saturday (W33 Peak Trade) — surpassing all previous site records.</p>
-                </div>
-                <div class="mt-4 sm:mt-0 text-right">
-                    <span class="text-xs text-emerald-300 block">Peak Saturday Breakfast & Dinner</span>
-                    <span class="text-lg font-bold text-white">Record Breaker</span>
-                </div>
-            </div>
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-            <!-- Past Weeks Performance History -->
-            <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                <div class="mb-4">
-                    <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400">Past Weeks Performance History</h3>
-                    <p class="text-xs text-zinc-500">Comparative trend analysis across recent trading periods</p>
-                </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-sm">
-                        <thead class="bg-zinc-50 dark:bg-zinc-800 text-zinc-500 text-xs uppercase tracking-wider">
-                            <tr>
-                                <th class="p-3">Metric</th>
-                                <th class="p-3">Target</th>
-                                <th class="p-3">W33 (Current)</th>
-                                <th class="p-3">W32 (w/e 8 Nov)</th>
-                                <th class="p-3">W31 (w/e 1 Nov)</th>
-                                <th class="p-3">W30 (w/e 25 Oct)</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-zinc-200 dark:divide-zinc-800 text-xs">
-                            <tr>
-                                <td class="p-3 font-medium">Sales vs Budget</td>
-                                <td class="p-3 text-zinc-500">Site Budget</td>
-                                <td class="p-3 font-semibold text-emerald-600">+9.87% (£60,417)</td>
-                                <td class="p-3 font-semibold text-emerald-600">+0.4% (£52,771)</td>
-                                <td class="p-3 text-rose-600">−3.8% (£51,351)</td>
-                                <td class="p-3 text-rose-600">−4.4% (£51,500)</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-medium">Labour Cost %</td>
-                                <td class="p-3 text-zinc-500">≤ 38.5%</td>
-                                <td class="p-3 font-semibold text-emerald-600">37.98%</td>
-                                <td class="p-3 font-semibold text-emerald-600">37.2%</td>
-                                <td class="p-3 text-rose-600">41.4%</td>
-                                <td class="p-3 text-rose-600">42.6%</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-medium">Spend Per Guest (SPG)</td>
-                                <td class="p-3 text-zinc-500">≥ £25.00</td>
-                                <td class="p-3 font-semibold text-emerald-600">£25.85</td>
-                                <td class="p-3 font-semibold text-emerald-600">£25.48</td>
-                                <td class="p-3 text-rose-600">£23.49</td>
-                                <td class="p-3 font-semibold text-emerald-600">£25.10</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-medium">Marcus Choice %</td>
-                                <td class="p-3 text-zinc-500">≥ 15.0%</td>
-                                <td class="p-3 font-semibold text-emerald-600">21.50%</td>
-                                <td class="p-3 font-semibold text-emerald-600">21.7%</td>
-                                <td class="p-3 text-rose-600">13.5%</td>
-                                <td class="p-3 text-rose-600">12.8%</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-medium">Drinks Attach</td>
-                                <td class="p-3 text-zinc-500">≥ 1.28</td>
-                                <td class="p-3 font-semibold text-amber-600">1.23</td>
-                                <td class="p-3 font-semibold text-amber-600">1.21</td>
-                                <td class="p-3 font-semibold text-amber-600">1.16</td>
-                                <td class="p-3 font-semibold text-amber-600">1.16</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-medium">Net Promoter Score (NPS)</td>
-                                <td class="p-3 text-zinc-500">≥ 80</td>
-                                <td class="p-3 font-semibold text-emerald-600">82</td>
-                                <td class="p-3 font-semibold text-emerald-600">82</td>
-                                <td class="p-3 font-semibold text-emerald-600">85</td>
-                                <td class="p-3 font-semibold text-emerald-600">83</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-medium">Team Pulse</td>
-                                <td class="p-3 text-zinc-500">≥ 7.0</td>
-                                <td class="p-3 font-semibold text-emerald-600">7.4</td>
-                                <td class="p-3 font-semibold text-emerald-600">7.3</td>
-                                <td class="p-3 font-semibold text-emerald-600">7.9</td>
-                                <td class="p-3 font-semibold text-emerald-600">7.8</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    .theme-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+    }
 
-            <!-- GM Narrative & Weekly Highlights -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div class="lg:col-span-2 bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400 mb-3">GM Weekly Briefing & Narrative</h3>
-                        <p class="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed mb-4">
-                            Really strong week finishing <strong>+9.87% up on budget (£60,417 vs £54,992)</strong>. A slow Mon–Thu (-22h saved on labour) was heavily outweighed by a record-breaking weekend: Friday's biggest breakfast ever (£9,449) and a massive Saturday (£14,547). Sunday saw strong brunch covers.
-                        </p>
-                        <div class="bg-amber-50 dark:bg-amber-950/30 border-l-4 border-amber-500 p-4 text-xs text-amber-800 dark:text-amber-200 rounded-r-lg">
-                            <strong>Operational Focus:</strong> Weekend brunch table turnover — 12pm is a real bottleneck with early tables (especially drinks-only) lingering. Food Alert coaching showed pest/checklist improvements, but kitchen labelling & FIFO need tighter focus.
-                        </div>
-                    </div>
-                </div>
+    .status-pill {
+      background: var(--badge-green-bg);
+      color: var(--badge-green-text);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+    }
 
-                <!-- Guest Sentiment Shout-Outs & Links -->
-                <div id="guest-sentiment" class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-3">
-                            <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400">Guest Sentiment</h3>
-                            <a href="https://client.sentimentsearch.com/my-business/overview" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-600 hover:underline">Sentiment Search ↗</a>
-                        </div>
-                        <ul class="space-y-3 text-xs text-zinc-600 dark:text-zinc-300">
-                            <li class="flex items-start space-x-2">
-                                <span class="text-emerald-600 font-bold">★</span>
-                                <span><strong>Amelia (x5 mentions):</strong> Praised for warm, attentive service & set-menu guidance.</span>
-                            </li>
-                            <li class="flex items-start space-x-2">
-                                <span class="text-emerald-600 font-bold">★</span>
-                                <span><strong>Jamal & Shay:</strong> Commended for impeccable menu & wine knowledge.</span>
-                            </li>
-                            <li class="flex items-start space-x-2">
-                                <span class="text-rose-600 font-bold">⚠</span>
-                                <span><strong>Guest Incident (9 Nov):</strong> 2-star review regarding unrequested £2 water charge. <em>Actioned: FOH briefing updated.</em></span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
 
-            <!-- This Week's Focus Board & Next Week Forecast Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- Focus Board (Spans 2 cols) -->
-                <div id="focus-areas" class="lg:col-span-2 bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                    <div class="flex justify-between items-center mb-4">
-                        <div>
-                            <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400">This Week's Focus Board</h3>
-                            <p class="text-xs text-zinc-500">Core operational priorities extracted from the Monday trading report</p>
-                        </div>
-                        <a href="https://planner.cloud.microsoft" target="_blank" rel="noopener noreferrer" class="text-xs bg-bmGreen text-white px-3 py-1.5 rounded-lg hover:bg-bmGreen-light transition flex items-center space-x-2">
-                            <span>Open Microsoft Planner ↗</span>
-                        </a>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <!-- Focus Area 1 -->
-                        <div class="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
-                            <div class="flex items-center space-x-2 mb-2">
-                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                                <h4 class="font-semibold text-sm text-bmGreen dark:text-emerald-400">1. Brunch Turnover</h4>
-                            </div>
-                            <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                                Tackle the 12pm bottleneck where early and drinks-only tables linger during peak weekend brunch rushes.
-                            </p>
-                        </div>
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 18px 20px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    }
 
-                        <!-- Focus Area 2 -->
-                        <div class="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
-                            <div class="flex items-center space-x-2 mb-2">
-                                <span class="w-2 h-2 rounded-full bg-rose-500"></span>
-                                <h4 class="font-semibold text-sm text-bmGreen dark:text-emerald-400">2. Labelling & FIFO</h4>
-                            </div>
-                            <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                                Tighten up kitchen labelling and strict FIFO compliance following Food Alert coaching feedback.
-                            </p>
-                        </div>
+    .kpi-title {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
 
-                        <!-- Focus Area 3 -->
-                        <div class="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
-                            <div class="flex items-center space-x-2 mb-2">
-                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                                <h4 class="font-semibold text-sm text-bmGreen dark:text-emerald-400">3. FOH Bill Checks</h4>
-                            </div>
-                            <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                                Brief FOH to distinguish tap vs. filtered water on arrival and rigorously check bills before dropping.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    .kpi-value {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
 
-                <!-- Next Week Outlook & Shift Notes -->
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-semibold text-bmGreen dark:text-emerald-400 mb-2">Next Week Outlook</h3>
-                        <p class="text-xs text-zinc-500 mb-4">Forecast & key training focus</p>
-                        <div class="space-y-3 text-xs text-zinc-600 dark:text-zinc-300">
-                            <div class="p-3 bg-zinc-50 dark:bg-zinc-800/50 rounded-lg">
-                                <p class="font-semibold text-bmGreen dark:text-emerald-400">Forecast Sales: £54,750</p>
-                                <p class="mt-1">Induction & Training: New Head Chef Luis (48 hrs) & Sous Chef Sam (48 hrs).</p>
-                            </div>
-                            <div class="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg border border-emerald-200 dark:border-emerald-900/50">
-                                <p class="font-semibold text-emerald-800 dark:text-emerald-300">Shift Log / Handover Note</p>
-                                <p class="mt-1 text-emerald-700 dark:text-emerald-400">Xmas decorations are now fully up across site. Ensure pre-shift briefings highlight Amelia & Jamal's shout-outs.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    .kpi-sub {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent-green);
+    }
 
-        </div>
-    </main>
+    .kpi-sub.amber {
+      color: var(--accent-amber);
+    }
 
-</body>
-</html>
+    /* Clean Record Sales Breakdown Section */
+    .records-breakdown-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin-bottom: 28px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .records-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .records-header h3 {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .records-header span {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .weekly-record-banner {
+      background: var(--bg-card-subtle);
+      border-left: 4px solid var(--accent-teal);
+      border-radius: 6px;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .weekly-record-banner .title {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent-teal);
+      letter-spacing: 0.05em;
+    }
+
+    .weekly-record-banner .amount {
+      font-size: 22px
